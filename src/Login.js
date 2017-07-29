@@ -9,17 +9,76 @@ class Login extends React.Component {
 			password: '',
 			errors: []
 		};
+		this.handleUsername = this.handleUsername.bind(this);
+		this.handlePassword = this.handlePassword.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.checkInputs = this.checkInputs.bind(this);
+		this.reset = this.reset.bind(this);
+
 	}
+
+	handleUsername(event) {
+		//const field = event.target.id;
+		const value = event.target.value;
+		
+		this.setState({
+			username: value
+		})
+	}
+
+	handlePassword(event) {
+		const value = event.target.value;
+		this.setState({
+			password: value
+		})
+	}
+
+	checkInputs() {
+		if(this.state.username !== '' && this.state.password !== '') {
+			return true;
+		}
+	}
+	
+
+	handleSubmit(event) {
+		event.preventDefault();
+		const check = this.checkInputs();
+		if(check) {
+			console.log('success');
+		} else {
+			console.log('fail');
+		}
+	}
+
+	reset() {
+		this.setState({
+			username: '',
+			password: ''
+		})
+	}
+
 
 	render() {
 		return (
 			<div className="login">
 				<h1>Login</h1>
 				<form>
-					<label htmlFor="username"><input type="text" id="username"/>UserName</label>
-					<label htmlFor="password"><input type="password" id="password"/>Password</label>
-					<button type="reset">Reset</button>
-					<button type="submit">Submit</button>
+
+					<label htmlFor="username">
+						<input type="text" 
+									 id="username"
+									 onChange={this.handleUsername}/>
+					UserName
+					</label>
+
+					<label htmlFor="password">
+						<input type="password" 
+									 id="password"
+									 onChange={this.handlePassword}/>
+					Password</label>
+
+					<button type="reset" onClick={this.reset}>Reset</button>
+					<button type="submit" onClick={this.handleSubmit}>Submit</button>
 				</form>
 				
 			</div>
