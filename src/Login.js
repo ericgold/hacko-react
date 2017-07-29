@@ -7,10 +7,11 @@ class Login extends React.Component {
 		this.state = {
 			username: '',
 			password: '',
-			errors: [
-				invalidUserName: 'Please enter a valid email address.',
-				invalidPassword: 'Your password must be at least 6 characters.'
-			]
+			errors: 
+				{
+					invalidUserName: 'Please enter a valid email address.',
+					invalidPassword: 'Your password must be at least 6 characters.'
+				} 
 		};
 		this.handleUsername = this.handleUsername.bind(this);
 		this.handlePassword = this.handlePassword.bind(this);
@@ -72,7 +73,7 @@ class Login extends React.Component {
 				<form>
 					<div>
 						<label htmlFor="username">UserName</label>
-						<input type="text" 
+						<input type="email" 
 									 id="username"
 									 onChange={this.handleUsername}/>
 					</div>
