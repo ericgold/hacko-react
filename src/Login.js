@@ -72,23 +72,23 @@ class Login extends React.Component {
 				<h1>Login</h1>
 				<form>
 					<div>
-						<label htmlFor="username">UserName</label>
 						<input type="email" 
 									 id="username"
 									 placeholder="name@domain.com"
 									 onChange={this.handleUsername}
 									 required/>
+						<label htmlFor="username">UserName</label>
 					</div>
 				
 					<div>
-						<label htmlFor="password">Password</label>
 						<input type="password" 
 									 id="password"
 									 placeholder="At least 6 characters"
-									 minlength="6"
+									 minLength="6"
 									 pattern="[0-9a-fA-F]{6,20}"
 									 onChange={this.handlePassword}
 									 required/>
+						<label htmlFor="password">Password</label>
 					</div>
 					
 					<div>
