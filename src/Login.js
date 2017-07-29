@@ -75,14 +75,20 @@ class Login extends React.Component {
 						<label htmlFor="username">UserName</label>
 						<input type="email" 
 									 id="username"
-									 onChange={this.handleUsername}/>
+									 placeholder="name@domain.com"
+									 onChange={this.handleUsername}
+									 required/>
 					</div>
 				
 					<div>
 						<label htmlFor="password">Password</label>
 						<input type="password" 
 									 id="password"
-									 onChange={this.handlePassword}/>
+									 placeholder="At least 6 characters"
+									 minlength="6"
+									 pattern="[0-9a-fA-F]{6,20}"
+									 onChange={this.handlePassword}
+									 required/>
 					</div>
 					
 					<div>

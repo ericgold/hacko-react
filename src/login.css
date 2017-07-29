@@ -29,6 +29,11 @@
 
 .login label {
 	width: 30%;
+	font-size: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 0.25rem;
 }
 
 .login input {
@@ -37,7 +42,19 @@
 	margin: 0.25rem 0;
 	border: 2px solid gray;
 	border-radius: 4px;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
+	text-align: right;
+	padding-right: 0.25rem;
+}
+
+.login input[type="email"]:valid,
+.login input[type="password"]:valid {
+	border: 2px solid mediumseagreen;
+}
+
+.login input[type="email"]:invalid,
+.login input[type="password"]:invalid {
+	border: 2px solid lightcoral;
 }
 
 .login button {
