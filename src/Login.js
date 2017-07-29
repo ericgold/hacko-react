@@ -7,7 +7,10 @@ class Login extends React.Component {
 		this.state = {
 			username: '',
 			password: '',
-			errors: []
+			errors: [
+				invalidUserName: 'Please enter a valid email address.',
+				invalidPassword: 'Your password must be at least 6 characters.'
+			]
 		};
 		this.handleUsername = this.handleUsername.bind(this);
 		this.handlePassword = this.handlePassword.bind(this);
@@ -18,19 +21,23 @@ class Login extends React.Component {
 	}
 
 	handleUsername(event) {
-		//const field = event.target.id;
 		const value = event.target.value;
-		
+		// run through validator
+		// if true, set username
 		this.setState({
 			username: value
 		})
+		// if false, show error message
 	}
 
 	handlePassword(event) {
 		const value = event.target.value;
+		// run through validator
+		// if true, set passwored
 		this.setState({
 			password: value
 		})
+		// if false, show error message
 	}
 
 	checkInputs() {
