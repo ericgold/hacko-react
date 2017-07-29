@@ -4,15 +4,35 @@
 	align-items: center;
 	max-width: 65%;
 	margin: 3rem auto;
-	padding: 0.5rem;
+	padding: 0.5rem 0;
 }
 
 .login h1 {
-	margin: 0 auto 1rem 2.5rem;
+	margin: 1rem auto;
+}
+
+.login form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 2px solid black;
+	border-radius: 4px;
+	padding: 1rem;
+}
+
+.login form div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0.25rem 0;
+}
+
+.login label {
+	width: 30%;
 }
 
 .login input {
-	width: 80%;
+	width: 70%;
 	height: 2rem;
 	margin: 0.25rem 0;
 	border: 2px solid gray;
@@ -29,4 +49,8 @@
 	color: white;
 	font-size: 1.5rem;
 	background-color: mediumseagreen;
+}
+
+.login button[type="reset"] {
+	background-color: lightcoral;
 }
