@@ -19,8 +19,6 @@ class Contacts extends React.Component {
 	}
 
 	handleSelect(event) {
-		console.log(event);
-		console.log(event.target.value);
 		this.setState({value: event.target.value})
 	}
 
