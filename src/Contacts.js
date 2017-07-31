@@ -62,7 +62,14 @@ function Form(props) {
 			<input type="text"
 						 value={props.search}
 						 onChange={props.handleChange} />
-				<input type="submit" name="Search"/>
+			
+			<select name="" id="">
+				<option value="name">Name</option>
+				<option value="phone">Phone</option>
+				<option value="email">Email</option>
+			</select>
+
+			<input type="submit" name="Search"/>
 		</form>
 	);
 }
