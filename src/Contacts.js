@@ -6,14 +6,22 @@ class Contacts extends React.Component {
 		super(props);
 		this.state = {
 			stateContacts: contacts,
-			search: ''
+			search: '',
+			value: ''
 		}
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleSelect = this.handleSelect.bind(this);
 	}
 
 	handleChange(event) {
 		this.setState({search: event.target.value});
+	}
+
+	handleSelect(event) {
+		console.log(event);
+		console.log(event.target.value);
+		this.setState({value: event.target.value})
 	}
 
 	handleSubmit(event) {
@@ -33,6 +41,7 @@ class Contacts extends React.Component {
 				<Form
 					handleSubmit={this.handleSubmit}
 					handleChange={this.handleChange}
+					handleSelect={this.handleSelect}
 					value={this.state.search}
 				/>
 				
@@ -63,7 +72,7 @@ function Form(props) {
 						 value={props.search}
 						 onChange={props.handleChange} />
 			
-			<select name="" id="">
+			<select value={props.value} onChange={props.handleSelect}>
 				<option value="name">Name</option>
 				<option value="phone">Phone</option>
 				<option value="email">Email</option>
