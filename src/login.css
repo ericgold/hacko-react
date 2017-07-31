@@ -52,27 +52,21 @@
 	border: 2px solid mediumseagreen;
 }
 
-.login input[type="email"]:invalid + label::after {
+.login input:invalid + label::after {
 	position: relative;
 	left: 10rem;
-	height: auto;
+	width: 200%;
 	background-color: lightcoral;
-	z-index: 10;
 	padding: 0.25rem;
 	color: white;
 	font-size: 1rem;
+}
+
+.login input[type="email"]:invalid:focus + label::after {
 	content: 'please enter a valid email address';
 }
 
-.login input[type="password"]:invalid + label::after {
-	position: relative;
-	left: 10rem;
-	height: auto;
-	z-index: 10;
-	padding: 0.25rem;
-	background-color: lightcoral;
-	color: white;
-	font-size: 1rem;
+.login input[type="password"]:invalid:focus + label::after {
 	content: 'your password must be at least 6 characters';
 }
 
