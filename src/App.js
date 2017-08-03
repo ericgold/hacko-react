@@ -7,15 +7,16 @@ import './App.css';
 //import Greetings from './Greetings';
 //import Menu from './Menu';
 //import ColorPicker from './ColorPicker';
-import Contacts from './Contacts';
+//import Contacts from './Contacts';
 //import TodoList from './TodoList';
 //import Login from './Login';
+import Calculator from './Calculator';
 
 class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Contacts />
+        <Calculator />
       </div>
       
     );
