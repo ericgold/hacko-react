@@ -30,7 +30,7 @@ function Button() {
 	return (
 		<div>
 			<MyButton>Button</MyButton>
-			<MyPrimaryButton>Primary Button</MyPrimaryButton>
+			<MyPrimaryButton default>Primary Button</MyPrimaryButton>
 		</div>
 		
 	)
