@@ -1,4 +1,5 @@
 import React from 'react';
+import LoginInput from './LoginInput';
 import './login.css';
 
 class Login extends React.Component {
@@ -72,22 +73,24 @@ class Login extends React.Component {
 				<h1>Login</h1>
 				<form>
 					<div>
-						<input type="email" 
+						<LoginInput 
+									 type="email" 
 									 id="username"
 									 placeholder="name@domain.com"
 									 onChange={this.handleUsername}
-									 required/>
+									 />
 						<label htmlFor="username">UserName</label>
 					</div>
 				
 					<div>
-						<input type="password" 
+						<LoginInput 
+									 type="password" 
 									 id="password"
 									 placeholder="At least 6 characters"
 									 minLength="6"
 									 pattern="[0-9a-fA-F]{6,20}"
 									 onChange={this.handlePassword}
-									 required/>
+									 />
 						<label htmlFor="password">Password</label>
 					</div>
 					

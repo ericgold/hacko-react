@@ -9,14 +9,17 @@ import './App.css';
 //import ColorPicker from './ColorPicker';
 //import Contacts from './Contacts';
 //import TodoList from './TodoList';
-//import Login from './Login';
-import Calculator from './Calculator';
+import Login from './Login';
+//import Calculator from './Calculator';
+//import Avatar from './Avatar';
+//import InitialAvatar from './InitialAvatar';
+import StyledComponents from './StyledComponents';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <Calculator />
+      <div>
+        <StyledComponents />
       </div>
       
     );
