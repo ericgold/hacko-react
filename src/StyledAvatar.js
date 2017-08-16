@@ -5,16 +5,16 @@ const MyAvatar = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 50px;
-	width: 50px;
+	height: ${props => props.size};
+	width: ${props => props.size};
 	border-radius: 50%;
 	background-color: ${props => props.backgroundColor};
-	color: white;
+	color: ${props => props.textColor};
 `;
 
 function StyledAvatar(props) {
 	return(
-		<MyAvatar backgroundColor="firebrick">EG</MyAvatar>
+		<MyAvatar backgroundColor="firebrick" textColor="lightblue" size="50px">EG</MyAvatar>
 	)
 }
 

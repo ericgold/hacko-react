@@ -14,14 +14,14 @@ import './App.css';
 //import Avatar from './Avatar';
 //import InitialAvatar from './InitialAvatar';
 //import StyledComponents from './StyledComponents';
-import Button from './Button';
-//import StyledAvatar from './StyledAvatar';
+//import Button from './Button';
+import StyledAvatar from './StyledAvatar';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <Button />
+        <StyledAvatar />
       </div>
       
     );
