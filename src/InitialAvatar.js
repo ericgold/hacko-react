@@ -6,10 +6,10 @@ function InitialAvatar(props) {
 		<div>
 			<Avatar backgroundColor="black" foregroundColor="white">
 			H
-		</Avatar>
-		<Avatar backgroundColor="indianred" foregroundColor="mistyrose">
+			</Avatar>
+			<Avatar backgroundColor="indianred" foregroundColor="mistyrose">
 			D
-		</Avatar>
+			</Avatar>
 		</div>
 		
 	)
