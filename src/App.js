@@ -15,15 +15,15 @@ import './App.css';
 //import InitialAvatar from './InitialAvatar';
 //import StyledComponents from './StyledComponents';
 //import Button from './Button';
-import StyledAvatar from './StyledAvatar';
+//import StyledAvatar from './StyledAvatar';
+//import Spinner from './Spinner';
+import FizzBuzz from './FizzBuzz';
+
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <StyledAvatar />
-      </div>
-      
+        <FizzBuzz number={2}/>
     );
   }
 }
