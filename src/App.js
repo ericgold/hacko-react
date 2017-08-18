@@ -17,13 +17,14 @@ import './App.css';
 //import Button from './Button';
 //import StyledAvatar from './StyledAvatar';
 //import Spinner from './Spinner';
-import FizzBuzz from './FizzBuzz';
+//import FizzBuzz from './FizzBuzz';
+import Twodo from './Twodo';
 
 
 class App extends React.Component {
   render() {
     return (
-        <FizzBuzz number={2}/>
+        <Twodo />
     );
   }
 }
