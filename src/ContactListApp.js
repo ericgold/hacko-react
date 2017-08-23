@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 import generated from './generated.json';
-//import ContactInformation from './ContactInformation';
+import './ContactListApp.css';
 
 const linkStyle = { color: 'red' };
 
@@ -17,14 +17,14 @@ const Links = generated.map((contact) => 	{
 /*	
 <NavLink exact activeStyle={linkStyle} to="/">Home</NavLink>
 */
-const ContactInformation = ({match}) => {
+const ContactInformation = (props) => {
 	return (
-		<div>
-			<img src={match.params.picture} alt=""/>
-			<p>Name: {match.params.name}</p>
-			<p>Email: {match.params.email}</p>
-			<p>Phone: {match.params.phone}</p>
-			<p>Address: {match.params.address}</p>
+		<div className="contact-card">
+			<img src={props.contact.picture} alt=""/>
+			<p>Name: {props.contact.name}</p>
+			<p>Email: {props.contact.email}</p>
+			<p>Phone: {props.contact.phone}</p>
+			<p>Address: {props.contact.address}</p>
 		</div>
 	)
 }
@@ -34,12 +34,13 @@ const ContactList = generated.map((contact) => {
 	return <Route 
 						/*guid={contact.guid}*/
 						path={"/" + contact.guid}
-						component={ContactInformation}
-						picture={contact.picture}
-						name={contact.name}
-						email={contact.email}
-						phone={contact.phone}
-						address={contact.address}
+						/*component={ContactInformation}*/
+						render={() => 
+							<ContactInformation 
+								contact={contact}
+							/>
+						}
+						
 					/>
 });
 
@@ -48,7 +49,7 @@ const ContactList = generated.map((contact) => {
 export default function ContactListApp(props) {
 	return (
 		<BrowserRouter>
-			<div>
+			<div className="wrapper">
 				<nav>
 					{Links} 
 				</nav>
