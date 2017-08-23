@@ -21,10 +21,13 @@ const ContactInformation = (props) => {
 	return (
 		<div className="contact-card">
 			<img src={props.contact.picture} alt=""/>
-			<p>Name: {props.contact.name}</p>
-			<p>Email: {props.contact.email}</p>
-			<p>Phone: {props.contact.phone}</p>
-			<p>Address: {props.contact.address}</p>
+			<div>
+				<p>Name: {props.contact.name}</p>
+				<p>Email: {props.contact.email}</p>
+				<p>Phone: {props.contact.phone}</p>
+				<p>Address: {props.contact.address}</p>
+			</div>
+			
 		</div>
 	)
 }
@@ -40,7 +43,6 @@ const ContactList = generated.map((contact) => {
 								contact={contact}
 							/>
 						}
-						
 					/>
 });
 
